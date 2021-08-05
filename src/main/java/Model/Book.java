@@ -21,7 +21,7 @@ public class Book {
         this.books = bookArrayList;
     }
 
-    // Geteriai ir Seteriai
+    //#region Geteriai ir Seteriai
     public Integer getId() {
         return id;
     }
@@ -53,7 +53,7 @@ public class Book {
     public void setName(String name) {
         this.name = name;
     }
-
+//#endregion
 //Konstruktorius
 
     public Book(Integer id, Integer year, String author, String name) {

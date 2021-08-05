@@ -1,5 +1,6 @@
 import Helpers.CsvFileHelper;
 import Model.Book;
+import Model.Car;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -11,8 +12,6 @@ import java.util.ArrayList;
 
 public class Main {
 
-    public static ArrayList<Book> books = new ArrayList<Book>();
-
     public static int id;
     public static int year;
     public static String author;
@@ -20,6 +19,7 @@ public class Main {
 
 
     public static void main(String[] args) {
+
         int width = 420;
         int height = 420;
 
@@ -104,15 +104,15 @@ public class Main {
                 } catch (IOException ioException) {
                     ioException.printStackTrace();
                 }
-//                System.out.println(id + year + author + name);
-//                System.out.println("paspausta Write");
+                System.out.println(id + year + author + name);
+                System.out.println("paspausta Write");
             }
         });
 
 
         btnRead.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-
+                ArrayList<Book> books = null;
                 try {
                     books = CsvFileHelper.getFromCsv("./src/main/java/Files/testCSV.csv");
                 } catch (IOException ioException) {

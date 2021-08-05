@@ -38,8 +38,8 @@ public class CsvFileHelper {
     //Skaitau ish CSV
     public static ArrayList<Book> getFromCsv(String s) throws IOException {
 
-
         ArrayList<Book> books = new ArrayList<Book>();
+
         FileReader fr = null;
         BufferedReader br = null;
         try {
@@ -126,7 +126,8 @@ public class CsvFileHelper {
                     Exception exc) {
                 System.out.println(String.format("Ivyko klaida: %s", exc.getMessage()));
             } finally {
-                bw.close();            }
+                bw.close();
+            }
 
 
             return books;
@@ -134,5 +135,4 @@ public class CsvFileHelper {
         } finally {
 
         }
-    }
-}
+        }}
